@@ -130,7 +130,7 @@ header img{
 .container__desc {
   display: block;
   width: 100%;
-  height: 1700px;
+  height: 100%;
   padding: 48px;
   border-radius: 50px;
   background: white;
@@ -162,11 +162,36 @@ header img{
 
 .content__description {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .block__text {
-  
+  flex: 50%;
+}
+
+.block__text p {
+  font-size: 20px;
+  font-family: Anonymous Pro;
+  font-weight: 400;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+.block__info {
+  flex: 50%;
+}
+
+.block__info p {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 30px;
+  font-size: 20px;
+  font-family: Anonymous Pro;
+  font-weight: 400;
+  line-height: 28px;
+  word-wrap: break-word;
 }
 
 body{
@@ -222,4 +247,44 @@ hr{
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+
+
+@media (max-width:375px ) {
+  .body{
+    height: 4297px;
+    padding: 0px 16px;
+  }
+  .header{
+    display: inline-block;
+    width: 375px;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+
+  }
+
+  .logo{
+    weight: 215px;
+  }
+
+  .main{
+    display: flex;
+  padding: 0px 16px 0px 16px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  }
+  .subtitle{
+    font-size: 32px;
+  }
+  .img{
+    weight: 343px;
+  }
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
 }
